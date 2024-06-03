@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <!-- <meta name="description" content="DESCRIPTION META TAG"> -->
+    <meta property="og:title"
+        content="Dimba" />
+    <!-- <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" /> -->
+    <meta property="og:url" content="https://dima-project.github.io/" />
+
+
+    <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png"> -->
+    <!-- <meta name="twitter:card" content="summary_large_image"> -->
+    <!-- Keywords for your paper to be indexed by-->
+    <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Dimba</title>
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.1.1/gradio.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero banner">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Dimba: Transformer-Mamba Diffusion Models</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=_43YnBcAAAAJ&view_op=list_works" target="_blank">Zhengcong Fei</a>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com.au/citations?user=ePIeVuUAAAAJ&hl=en" target="_blank">Mingyuan
+                                    Fan</a>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=Hv-vj2sAAAAJ&hl=en" target="_blank">Changqian Yu</a>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com.hk/citations?user=jXDNILIAAAAJ&hl=zh-CN" target="_blank">Debang Li</a>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank">Youqiang Zhang</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=FFB6lzQAAAAJ&view_op=list_works"
+                                    target="_blank">Junshi Huang</a><sup>*</sup>
+                            </span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <div><span class="author-block">Kunlun Inc.</span></div>
+                            <span class="author-block">Beijing, China</span>
+                            <span class="eql-cntrb"><small><br><sup>*</sup><a
+                                        href="mailto:feizhengcong@gmail.com">Corresponding author.</a></small></span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a href="https://github.com/feizc/Dimba" target="_blank"
+                                        class="external-link button is-normal is-rounded is-white">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/datasets/feizhengcong/Dimba" target="_blank"
+                                        class="external-link button is-normal is-rounded is-white">
+                                        <span class="icon">🤗</span>
+                                        <span>Models</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/feizhengcong/Dimba" target="_blank"
+                                        class="external-link button is-normal is-rounded is-white">
+                                        <span class="icon">
+                                             <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>Datasets</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://arxiv.org" target="_blank"
+                                        class="external-link button is-normal is-rounded is-white">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image carousel -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/1.jpeg" alt="carousel1" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/5.jpeg" alt="carousel2" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/3.jpeg" alt="carousel3" />
+                        </div>
+                    </div> 
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/4.jpeg" alt="carousel4" />
+                        </div> 
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/2.jpeg" alt="carousel5" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/6.jpeg" alt="carousel6" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/cases/7.jpeg" alt="carousel7" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End image carousel -->
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            This paper unveils Dimba, a new text-to-image diffusion models that employs a distinctive hybrid architecture combining Transformer and Mamba elements. Specifically, Dimba sequentially stacked blocks in alternates between Transformer and Mamba layers, and integrates conditional information through cross-attention layer, thus capitalizing on the advantages of both architectural paradigms. We investigate several optimization strategies, including quality tuning, resolution adaption, and identify critical configurations necessary for large-scale image generation. The model's flexible design supports scenarios that cater to specific resource constraints and objectives. When scaled appropriately, Dimba offers substantial throughput and a reduced memory footprint relative to conventional pure Transformers-based benchmarks. Extensive experiments indicate that Dimba achieve comparable performance compared with benchmarks in terms of image quality, artistic rendering, and semantic control. We also report several intriguing properties of architecture discovered during evaluation and  release checkpoints in experiments. Our findings emphasize the promise of large-scale hybrid Transformer-Mamba architectures in the foundational stage of diffusion models, suggesting a bright future for text-to-image generation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+    
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">More Samples</h2>
+                <h2>Qualitative comparison of Dimba with four other open-source text-to-image models. Baselines include Playground v2.5, PixArt, SDXL and SDXL Turbo. Images generated by Dimba are very competitive with these benchmarks and show more details and aesthetics.
+                </h2>
+                <img loading="lazy" src="static/cases/compare.png" alt="compare" />
+                <!-- <img loading="lazy" src="static/images/controlnet/controlnet_iclr.svg" alt="iclr" /> -->
+            </div>
+        </div>
+    </section>
+     </section>
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">User Study and AI Preference</h2>
+                <h2>The ratio values indicate the percentages of participants preferring Dimba over the corresponding baselines. Dimba achieves a superior capacity in both image quality and prompt following.
+                </h2>
+                <img loading="lazy" src="static/cases/user.png" alt="quality" />
+            </div>
+        </div>
+    </section>
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">Quality Tuning</h2>
+                <h2>Comparison of images generated by the pre-trained and quality-tuned Dimba model. Quality-tunning can significantly optimize the synthesis image in details and aesthetics.
+                </h2>
+                <img loading="lazy" src="static/cases/quality.jpg" alt="quality" />
+            </div>
+        </div>
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@misc{fei2024dimba,
+    title={Dimba: Transformer-Mamba Diffusion Models}, 
+    author={Zhengcong Fei and Mingyuan Fan and Changqian Yu and Debang Li and Youqiang Zhang and Junshi Huang},
+    year={2024},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}</code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            You are free to borrow the of this website, we just ask that you link back to this page in
+                            the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
